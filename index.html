@@ -46,12 +46,28 @@ body {
   width: 100%;
   height: 100%;
 }
+
+.heart {
+  transition: transform 0.3s;
+}
+
+.heart:hover, .heart.clicked {
+  transform: rotate(360deg);
+}
 </style>
 
-
 <audio id="myAudio" src="https://ia902604.us.archive.org/5/items/202307071844/202307071844.mp3" type="audio/mpeg" autoplay></audio>
-<!-- partial -->
-<script src="./script.js"></script>
+
+<script>
+var heart = document.querySelector('.heart');
+
+function toggleAnimation() {
+  heart.classList.toggle('clicked');
+}
+
+heart.addEventListener('mouseover', toggleAnimation);
+heart.addEventListener('click', toggleAnimation);
+</script>
 
 </body>
 </html>
