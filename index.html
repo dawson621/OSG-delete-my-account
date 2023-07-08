@@ -39,9 +39,13 @@ body {
 </style>
 
 
-<audio id="myAudio" src="https://ia902604.us.archive.org/5/items/202307071844/202307071844.mp3" type="audio/mpeg" autoplay></audio>
+<audio id="myAudio" src="https://ia902604.us.archive.org/5/items/202307071844/202307071844.mp3" type="audio/mpeg"></audio>
 <!-- partial -->
   <script src="./script.js"></script>
-
+  <script>
+    var audio = document.getElementById('myAudio');
+    audio.autoplay = true;
+    audio.load();
+  </script>
 </body>
 </html>
