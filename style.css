@@ -1,17 +1,9 @@
 <style>
 body {
-  position: relative;
-  background-image: url('https://i.ibb.co/0MZg3Y5/Screenshot-20230707-202902-One-Shot-Golf-450x1002.jpg');
-  width: 208px;
-  height: 950px;
-  background-repeat: no-repeat;
+  text-align: center;
 }
 
 .heart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-size: 150px;
   color: #e00;
   animation: beat 0.25s infinite alternate;
@@ -19,8 +11,4 @@ body {
 }
 
 @keyframes beat {
-  to {
-    transform: scale(1.4);
-  }
-}
 </style>
