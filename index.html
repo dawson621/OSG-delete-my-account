@@ -33,6 +33,7 @@
 
 <style>
 body {
+  text-align: center;
   background-image: url('https://i.ibb.co/0MZg3Y5/Screenshot-20230707-202902-One-Shot-Golf-450x1002.jpg');
   width: 208px;
   height: 950px;
@@ -48,11 +49,22 @@ body {
 }
 
 .heart {
+  font-size: 150px;
+  color: #e00;
+  transform-origin: center;
   transition: transform 0.3s;
 }
 
-.heart:hover, .heart.clicked {
-  transform: rotate(360deg);
+.heart:hover,
+.heart.clicked {
+  animation: beat .25s infinite alternate;
+  transform: rotate(360deg) scale(1.4);
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.4);
+  }
 }
 </style>
 
@@ -60,12 +72,25 @@ body {
 
 <script>
 var heart = document.querySelector('.heart');
+var isAnimating = false;
 
 function toggleAnimation() {
+  isAnimating = !isAnimating;
   heart.classList.toggle('clicked');
 }
 
-heart.addEventListener('mouseover', toggleAnimation);
+heart.addEventListener('mouseenter', function() {
+  if (!isAnimating) {
+    toggleAnimation();
+  }
+});
+
+heart.addEventListener('mouseleave', function() {
+  if (isAnimating) {
+    toggleAnimation();
+  }
+});
+
 heart.addEventListener('click', toggleAnimation);
 </script>
 
