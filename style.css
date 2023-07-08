@@ -3,7 +3,6 @@ body {
 
 }
 
-
 .heart {
 	font-size: 150px;
 	color: #e00;
@@ -11,16 +10,6 @@ body {
 	transform-origin: center;
 }
 
-/* Heart beat animation */
 @keyframes beat{
 	to { transform: scale(1.4); }
 }
-
-
-
-
-
-
-
-
-
