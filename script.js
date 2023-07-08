@@ -1,11 +1,6 @@
-var heart = document.querySelector('.heart');
-var audio = document.getElementById('myAudio');
-
-heart.addEventListener('mouseenter', function() {
-  audio.play();
-});
 <script>
 var heart = document.querySelector('.heart');
+var audio = document.getElementById('myAudio');
 
 function toggleAnimation() {
   heart.classList.toggle('clicked');
@@ -13,5 +8,7 @@ function toggleAnimation() {
 
 heart.addEventListener('mouseover', toggleAnimation);
 heart.addEventListener('click', toggleAnimation);
+heart.addEventListener('mouseenter', function() {
+  audio.play();
+});
 </script>
-
