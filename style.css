@@ -18,13 +18,13 @@ body {
 .heart {
   font-size: 150px;
   color: #e00;
+  animation: beat .25s infinite alternate;
   transform-origin: center;
   transition: transform 0.3s;
 }
 
 .heart:hover,
 .heart.clicked {
-  animation: beat 17s infinite alternate;
   transform: rotate(360deg) scale(1.4);
 }
 
