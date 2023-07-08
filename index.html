@@ -22,35 +22,36 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
-  <style>
-    body {
-      background-image: url('https://i.ibb.co/0MZg3Y5/Screenshot-20230707-202902-One-Shot-Golf-450x1002.jpg');
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-repeat: no-repeat;
-    }
-
-    .heart {
-      width: 400px;
-      height: 400px;
-    }
-  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
+<div class="container">
   <img class="heart" src="https://shop.oneshotgames.com/cdn/shop/products/sticker_puttzy_1_1024x1024@2x.png"
-     alt="puttzy">
-<!-- partial -->
-<audio id="myAudio" src="https://ia902604.us.archive.org/5/items/202307071844/202307071844.mp3" type="audio/mpeg"></audio>
+       alt="puttzy"
+       width="400" height="400">
+</div>
 
+<style>
+body {
+  background-image: url('https://i.ibb.co/0MZg3Y5/Screenshot-20230707-202902-One-Shot-Golf-450x1002.jpg');
+  width: 208px;
+  height: 950px;
+  background-repeat: no-repeat;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+</style>
+
+
+<audio id="myAudio" src="https://ia902604.us.archive.org/5/items/202307071844/202307071844.mp3" type="audio/mpeg" autoplay></audio>
+<!-- partial -->
 <script src="./script.js"></script>
-<script>
-  var audio = document.getElementById('myAudio');
-  audio.autoplay = true;
-  audio.load();
-</script>
+
 </body>
 </html>
