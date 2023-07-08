@@ -14,3 +14,4 @@ function toggleAnimation() {
 heart.addEventListener('mouseover', toggleAnimation);
 heart.addEventListener('click', toggleAnimation);
 </script>
+
